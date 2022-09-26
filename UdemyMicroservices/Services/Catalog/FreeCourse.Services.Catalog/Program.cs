@@ -20,7 +20,7 @@ builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("D
 
 builder.Services.AddSingleton<IDatabaseSettings>(sp =>
 {
-    return sp.GetRequiredService<IOptions<IDatabaseSettings>>().Value;
+    return sp.GetRequiredService<IOptions<DatabaseSettings>>().Value;
 });
 
 var app = builder.Build();
