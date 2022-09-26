@@ -14,6 +14,7 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(typeof(Program));
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 
 builder.Services.Configure<DatabaseSettings>(builder.Configuration.GetSection("DatabaseSettings"));
 
