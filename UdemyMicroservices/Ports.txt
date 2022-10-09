@@ -1,5 +1,8 @@
 Services
-	-catalogAPI => 5011
+	-catalogAPI => 5011	
+	-photostockAPI => 5012
+
+-identityserver => 5001
 
 Portainer.io
 	- host => 9443
