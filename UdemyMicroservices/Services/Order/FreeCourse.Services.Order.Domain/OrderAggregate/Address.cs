@@ -10,6 +10,9 @@ namespace FreeCourse.Services.Order.Domain.OrderAggregate
         public string ZipCode { get; private set; }
         public string Line { get; private set; }
 
+        public Address()
+        {
+        }
         public Address(string province, string district, string street, string zipCode, string line)
         {
             Province = province;
