@@ -18,6 +18,7 @@ namespace FreeCourse.IdentityServer
             new ApiResource("resource_basket"){Scopes = {"basket_fullpermisson"}},
             new ApiResource("resource_discount"){Scopes = {"discount_fullpermisson"}},
             new ApiResource("resource_order"){Scopes = {"order_fullpermisson"}},
+            new ApiResource("resource_fake_payment"){Scopes = {"fake_payment_fullpermisson"}},
             new ApiResource(IdentityServerConstants.LocalApi.ScopeName)
         };
 
@@ -38,6 +39,7 @@ namespace FreeCourse.IdentityServer
                 new ApiScope("basket_fullpermisson", "Basket Api için full erişim"),
                 new ApiScope("discount_fullpermisson", "Discount Api için full erişim"),
                 new ApiScope("order_fullpermisson", "Order Api için full erişim"),
+                new ApiScope("fake_payment_fullpermisson", "Fake Payment Api için full erişim"),
                 new ApiScope(IdentityServerConstants.LocalApi.ScopeName)
             };
 
@@ -63,6 +65,7 @@ namespace FreeCourse.IdentityServer
                     AllowedScopes = { "basket_fullpermisson",
                                       "discount_fullpermisson",
                                       "order_fullpermisson",
+                                      "fake_payment_fullpermisson",
                                       IdentityServerConstants.StandardScopes.Email, 
                                       IdentityServerConstants.StandardScopes.OpenId, 
                                       IdentityServerConstants.StandardScopes.Profile,
