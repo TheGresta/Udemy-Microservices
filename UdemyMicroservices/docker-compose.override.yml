@@ -91,3 +91,13 @@ services:
       - type: bind
         source: C:\Users\DincF\Documents\GitHub\Udemy-Microservices\UdemyMicroservices\Services\PhotoStock\FreeCourse.Services.PhotoStock\wwwroot\photos
         target: /app/wwwroot/photos
+  discount.api:
+    container_name: discount.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - IdentityServerURL:http://identityserver.api:5001
+      - "PostgreSql=User ID=postgres;Password=Password12*;Server=discountdb;Port5432;Database=discountdb;Integrated Security=true;Pooling=true"
+    ports:
+      - "5014:80"
+    depends_on:
+      - discountdb
